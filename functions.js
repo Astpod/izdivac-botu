@@ -35,30 +35,6 @@ client.tarihHesapla = (date) => {
   return `\`${string} önce\``;
 };
 
-client.userRolesCheckAndUpdate = async (message, member, author, role) => {
-  if(member.roles.cache.has(role.id)) {
-    await member.roles.remove(role).catch();
-    await message.guild.channels.cache.get(cfg.rolvermelog).wsend(new MessageEmbed().setColor("RED").setAuthor(message.author.tag, message.author.avatarURL({dynamic: true})).setDescription(`${author} tarafından ${member} adlı üyeden ${role} adlı rol alındı.`))
-    await message.channel.send(new MessageEmbed().setColor("RED").setAuthor(message.author.tag, message.author.avatarURL({dynamic: true})).setDescription(`${author} tarafından ${member} adlı üyeden ${role} adlı rol alındı.`)).then(x => x.delete({timeout: 10000}))
-  } else {
-    await member.roles.add(role).catch();
-    await message.guild.channels.cache.get(cfg.rolvermelog).wsend(new MessageEmbed().setColor("GREEN").setAuthor(message.author.tag, message.author.avatarURL({dynamic: true})).setDescription(`${author} tarafından ${member} adlı üyeye ${role} adlı rol verildi.`))
-    await message.channel.send(new MessageEmbed().setColor("GREEN").setAuthor(message.author.tag, message.author.avatarURL({dynamic: true})).setDescription(`${author} tarafından ${member} adlı üyeye ${role} adlı rol verildi.`)).then(x => x.delete({timeout: 10000}))    
-  }
-};
-  
-client.muted = async(user, admin) => {
-  await user.roles.add(cfg.muted)
-};
-
-client.unmuted = async(user, admin) => {
-  await user.roles.remove(cfg.muted)
-};
-
-client.delete = async(msg) => {
-  await msg.delete()
-}
-
 client.getRandomInt = (min, max) => {
     (min = Number(min)), (max = Number(max));
     return min + Math.floor((max - min) * Math.random());
