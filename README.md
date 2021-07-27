@@ -17,4 +17,5 @@ Discord Sunucumuz: discord.gg/serendia
 
 # Ekran Görüntüleri
 
-<img src="https://astpod.please-end.me/55t9bH815">
+<img src="https://cdn.discordapp.com/attachments/861999154493784111/869692543837822996/unknown.png">
+<img src="https://cdn.discordapp.com/attachments/794187417757548544/869692670895870063/unknown.png">
