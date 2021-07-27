@@ -35,7 +35,6 @@ module.exports.execute = async (client, message, args, embed) => {
     if(!message.member.voice.channel) return message.channel.send(embed.setDescription(`Randevu gönderen kişi seste bulunmuyor.`))
     if(!member.voice.channel) return message.channel.send(embed.setDescription(`Randevu alan kişi seste bulunmuyor.`))
     await ProfileData.findOneAndUpdate({ guildID: message.guild.id, userID: message.author.id }, { $inc: { accept: 1 } }, { upsert: true });
-    message.channel.send(kabul).then(msg => { msg.delete({ timeout: 10000 }) })
     message.member.voice.setChannel(member.voice.channel);
     if(Prof.accept.length > 5) {
     await message.member.roles.add(cfg.rozetrol1)
@@ -49,7 +48,6 @@ module.exports.execute = async (client, message, args, embed) => {
     } else {
     message.channel.send(`${cfg.no} ${message.author}, ${member} adlı kullanıcı randevu teklifini red etti.`)
     await ProfileData.findOneAndUpdate({ guildID: message.guild.id, userID: message.author.id }, { $inc: { deny: 1 } }, { upsert: true });
-    message.channel.send(kabul).then(msg => { msg.delete({ timeout: 10000 }) })   
      }
     })
     }
