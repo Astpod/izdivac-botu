@@ -1,0 +1,16 @@
+{
+  "sunucuID": "Sunucu ID",
+  "token": "Bot Tokeni",
+  "mongoURL": "Mongo URL'si",
+  "prefix": "prefix",
+  "sesKanalı": "Botun gireceği ses kanalı",
+  "status": ["Serendia ❤️ Astpod", "Astpod ❤️ Serendia"],
+  "owner": ["Bot owner id"],
+  "ok": "evet emoji id",
+  "no": "hayrı emoji id",
+  "randevunvarkanalı": "randevu var kanal id",
+  "rozetrol1": "5 kabul randevuya verilcek rol id",
+  "rozetrol2": "10 kabul randevuya verilcek rol id",
+  "rozetrol3": "15 kabul randevuya verilcek rol id",
+  "rozetrol4": "20 kabul randevuya verilcek rol id"
+}
