@@ -14,3 +14,7 @@ Sorun Olursa: Astpod#2019
 # Sunucumuz
 
 Discord Sunucumuz: discord.gg/serendia
+
+# Ekran Görüntüleri
+
+<img src="https://astpod.please-end.me/55t9bH815">
