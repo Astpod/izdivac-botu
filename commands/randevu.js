@@ -29,7 +29,7 @@ module.exports.execute = async (client, message, args, embed) => {
     await mesaj.react(cfg.no);
     mesaj.awaitReactions(filter, {
         max: 1,
-    }).then(collected => {
+    }).then(async (collected) => {
      const reaction = collected.first();
      if (reaction.emoji.id === cfg.ok) {
     message.channel.send(`${cfg.ok} ${message.author}, ${member} adlı kullanıcı randevu teklifini kabul etti odaya yönlendirliyor.`)
