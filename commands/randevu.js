@@ -17,7 +17,7 @@ module.exports.execute = async (client, message, args, embed) => {
       const filter = (reaction, user) => {
         return ([cfg.ok, cfg.no].includes(reaction.emoji.id) && user.id === member.id);
     };
-    const Prof = await ProfileData.findOne({guildID: message.guild.id, userID: member.user.id})
+    const Prof = await ProfileData.findOne({guildID: message.guild.id, userID: message.author.id})
     let teklif = new MessageEmbed()
     .setAuthor(message.author.username, message.author.displayAvatarURL({dynamic: true}))
     .setDescription(`${message.author} size bir randevu teklif ediyor kabul ediyor musun?
