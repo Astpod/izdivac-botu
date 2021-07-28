@@ -14,6 +14,7 @@ module.exports.execute = async (client, message, args, embed) => {
     } else {
       let member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
       if(!member) return message.channel.send(embed.setDescription(`Bir kullanıcı etiketlemelisin.`))
+      await ProfileData.findOneAndUpdate({ guildID: message.guild.id, userID: message.author.id }, { $inc: { randevu: 1 } }, { upsert: true });
       const filter = (reaction, user) => {
         return ([cfg.ok, cfg.no].includes(reaction.emoji.id) && user.id === member.id);
     };
