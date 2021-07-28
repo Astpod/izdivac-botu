@@ -27,9 +27,9 @@ module.exports.execute = async (client, message, args, embed) => {
 **❯ Kullanıcı Profili**
 \`•\` İsim: **${Regs ? Regs.name : "Kullanıcının ismi bulunmuyor."}**
 \`•\` Yaş: **${Regs ? Regs.age : "Kullanıcının yaşı bulunmuyor."}**
-\`•\` Instagram: **${Prof ? Prof.instagram : "Kullanıcının instagram hesabı bulunmuyor."}**
-\`•\` Oynadığı Oyunlar: **${Prof ? Prof.game : "Kullanıcının oynadığı oyunlar bulunmuyor."}**
-\`•\` Burç: **${Prof ? Prof.burç : "Kullanıcının burç bilgisi bulunmuyor."}**
+\`•\` Instagram: **${Regs ? Regs.instagram : "Kullanıcının instagram hesabı bulunmuyor."}**
+\`•\` Oynadığı Oyunlar: **${Regs ? Regs.game : "Kullanıcının oynadığı oyunlar bulunmuyor."}**
+\`•\` Burç: **${Regs ? Regs.burç : "Kullanıcının burç bilgisi bulunmuyor."}**
 \`•\` Randevu komutu kullanım sayısı: **${Prof ? Prof.randevu : 0}**
 
 **❯ İzdivaç Bilgisi**
@@ -38,7 +38,7 @@ module.exports.execute = async (client, message, args, embed) => {
 \`•\` Toplam beğeni sayısı: **${likeTop ? likeTop.like : 0}**
 \`•\` Hakkında:
 \`\`\`
-${Prof ? Prof.about : "Kullanıcının hakkında bilgisi bulunmuyor."}
+${Regs ? Regs.about : "Kullanıcının hakkında bilgisi bulunmuyor."}
 \`\`\`
 `)
 .setFooter(`Kullanıcıyı beğendiyseniz ${cfg.prefix}randevu @kullanıcı komutunu kullanarak randevu teklif edebilirsiniz. profili düzenlemek için ${cfg.prefix}profil-düzenle bilgi yazarak yapabilirsiniz.`)

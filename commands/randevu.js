@@ -37,19 +37,28 @@ module.exports.execute = async (client, message, args, embed) => {
     if(!member.voice.channel) return message.channel.send(embed.setDescription(`Randevu alan kişi seste bulunmuyor.`))
     await ProfileData.findOneAndUpdate({ guildID: message.guild.id, userID: message.author.id }, { $inc: { accept: 1 } }, { upsert: true });
     message.member.voice.setChannel(member.voice.channel);
-    if(Prof.accept.length > 5) {
+    if(Prof.accept.length > 30) {
     await message.member.roles.add(cfg.rozetrol1)
-    } if(Prof.accept.length > 10) {
+    } if(Prof.accept.length > 40) {
     await message.member.roles.add(cfg.rozetrol2)
-    } if(Prof.accept.length > 15) {
+    } if(Prof.accept.length > 50) {
     await message.member.roles.add(cfg.rozetrol3)
-    } if(Prof.accept.length > 20) {
+    } if(Prof.accept.length > 60) {
     await message.member.roles.add(cfg.rozetrol4)
     }
     } else {
     message.channel.send(`${cfg.no} ${message.author}, ${member} adlı kullanıcı randevu teklifini red etti.`)
     await ProfileData.findOneAndUpdate({ guildID: message.guild.id, userID: message.author.id }, { $inc: { deny: 1 } }, { upsert: true });
-     }
+    if(Prof.deny.length > 30) {
+      await message.member.roles.add(cfg.redrozetrol1)
+      } if(Prof.deny.length > 40) {
+      await message.member.roles.add(cfg.redrozetrol2)
+      } if(Prof.deny.length > 50) {
+      await message.member.roles.add(cfg.redrozetrol3)
+      } if(Prof.deny.length > 60) {
+      await message.member.roles.add(cfg.redrozetrol4)
+      }   
+  }
     })
     }
   })
