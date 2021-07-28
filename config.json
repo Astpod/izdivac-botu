@@ -9,8 +9,12 @@
   "ok": "evet emoji id",
   "no": "hayrı emoji id",
   "randevunvarkanalı": "randevu var kanal id",
-  "rozetrol1": "5 kabul randevuya verilcek rol id",
-  "rozetrol2": "10 kabul randevuya verilcek rol id",
-  "rozetrol3": "15 kabul randevuya verilcek rol id",
-  "rozetrol4": "20 kabul randevuya verilcek rol id"
+  "rozetrol1": "30 kabul randevuya verilcek rol id",
+  "rozetrol2": "40 kabul randevuya verilcek rol id",
+  "rozetrol3": "50 kabul randevuya verilcek rol id",
+  "rozetrol4": "60 kabul randevuya verilcek rol id",
+  "redrozetrol1": "30 red randevuya verilcek rol id",
+  "redrozetrol2": "40 red randevuya verilcek rol id",
+  "redrozetrol3": "50 red randevuya verilcek rol id",
+  "redrozetrol4": "60 red randevuya verilcek rol id"
 }
