@@ -11,6 +11,11 @@
 
 Sorun Olursa: Astpod#2019
 
+# Önemli
+
+proje bana aittir izinsiz paylaşılması yasaktır.
+
+
 # Sunucumuz
 
 Discord Sunucumuz: discord.gg/serendia
