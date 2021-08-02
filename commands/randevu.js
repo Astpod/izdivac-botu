@@ -19,12 +19,12 @@ module.exports.execute = async (client, message, args, embed) => {
         return ([cfg.ok, cfg.no].includes(reaction.emoji.id) && user.id === member.id);
     };
     const Prof = await ProfileData.findOne({guildID: message.guild.id, userID: message.author.id})
-    let teklif = new MessageEmbed()
+    let randevuck = new MessageEmbed()
     .setAuthor(message.author.username, message.author.displayAvatarURL({dynamic: true}))
     .setDescription(`${message.author} size bir randevu teklif ediyor kabul ediyor musun?
 \`•\` Randevu teklifini veren kullanıcıyı incelemek için **${cfg.prefix}profil @kullanıcı** komutunu kullanabilirsiniz.`)
     .setColor("RANDOM")
-    let mesaj = await message.guild.channels.cache.get(cfg.randevunvarkanalı).send(`${member}`,teklif)
+    let mesaj = await message.guild.channels.cache.get(cfg.randevunvarkanalı).send(`${member}`,randevuck)
     await mesaj.react(cfg.ok);
     await mesaj.react(cfg.no);
     mesaj.awaitReactions(filter, {
